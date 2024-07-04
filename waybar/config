@@ -1,0 +1,98 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 35, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["custom/arch", "hyprland/workspaces","keyboard-state"],
+    "modules-center": ["clock","custom/updates"],
+    "modules-right": ["backlight", "cpu", "memory", "network"],
+
+	
+     "custom/arch": {
+	 "format": "<span color='#8aadf4'>  󰣇  </span>",
+	 "on-click": "~/.config/waybar/wlogout",
+	 "tooltip": false,
+     },
+
+
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "on-click": "activate",
+         "warp-on-scroll": true,
+         "format": "{icon}",
+         "format-icons": {
+	          "active": "<span color='#cad3f5'></span>"
+         }
+     },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    
+    "clock": {
+    "format": "<span color='#8bd5ca'> </span>{:%H:%M}",
+    },
+    
+
+    "custom/calendar": {
+        // "timezone": "America/New_York",
+        "format": "{:%Y-%m-%d}",
+    },
+    "cpu": {
+        "format": "{usage}% <span color='#f5a97f'></span>",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% <span color='#eed49f'></span>"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "<span color='#a6da95'>󰢾</span>",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "<span color='#ed8796'>󰢿</span>",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "~/.config/waybar/brightness --inc",
+        "on-scroll-down": "~/.config/waybar/brightness --dec"
+    },
+
+
+      "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/waybar/update-sys",
+        "on-click": "~/.config/HyprV/waybar/scripts/update-sys update",
+        "interval": 300,
+        "tooltip": true
+    } 
+}
+
