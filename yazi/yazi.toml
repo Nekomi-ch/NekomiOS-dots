@@ -1,0 +1,12 @@
+# yazi.toml
+[manager]
+show_hidden = true
+sort_by = "natural"
+sort_sensitive = true
+#mouse_events = "click, scroll, move" #no idea
+
+[opener]
+edit = [
+	{run = 'nvim "$@"', block = true},
+]
+
