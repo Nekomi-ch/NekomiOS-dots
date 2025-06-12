@@ -40,5 +40,5 @@ a_usr on discord
 and of course
 [My Computing Professor](https://profiles.imperial.ac.uk/c.cantwell)
 
-## NixOS Config (Video soon)
+## NixOS Config [Video out](https://www.youtube.com/watch?v=N8xxCHe0g3s&t=144s)
 [I have taken the Nix Pill](https://github.com/Nekomi-ch/NekomiNix)
