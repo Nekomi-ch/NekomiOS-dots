@@ -1,3 +1,7 @@
+>[!WARNING]
+>This dotfiles has been migrated to [Codeberg](https://codeberg.org/nekomi_ch/NekomiOS-dots)
+>Hence this repo will be archived.
+
 # NekomiOS-dots
 
 ## Seen on YouTube! (Click photo for video)
